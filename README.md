@@ -3,19 +3,19 @@ An API REST to manage user notes: create, update, delete and read.
 This API includes authentication, access control over routes and basic CRUD operations.
 
 # Tech Stack
-- Node.js
-- Express
-- MySQL
-- JWT para autenticación
+- **Node.js**
+- **Express**
+- **MySQL**
+- **JWT** for authentication
 
-# Run on local
+# Run locally
 
 ## Clone the repository
 ```
 git clone https://github.com/TechDev-01/notes-crud.git
 ```
 
-## Cd to the directory
+## Navigate to the project directory
 ```
 cd notes-crud
 ```
@@ -23,7 +23,7 @@ cd notes-crud
 ```
 npm install
 ```
-## Create the .env file and set up the variables
+## Set up environment variables
 ```
 cp .env.example .env
 ```
@@ -34,15 +34,26 @@ npm run dev
 
 # Endpoints
 
-## Usuarios
+## Users
 
 ### POST /api/register
 - Create a new user in the database
-- Body: { "username": "john", "password": "1234" }
+```
+body: {
+  "username": "john",
+  "password": "1234"
+}
+```
 
 ### POST /api/login
 - Retorns a JWT token for authentication
-- Body: { "username": "john", "password": "1234" }
+```
+body: {
+  "username": "john",
+  "password": "1234",
+  "access_token": eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IkpvaG4gRG9lIiwiYWRtaW4iOnRydWUsImlhdCI6MTUxNjIzOTAyMn0.KMUFsIDTnFmyG3nMiGM6H9FNFUROf3wh7SmqJp-QV30
+}
+```
 
 ---
 
@@ -53,10 +64,20 @@ npm run dev
 
 ### POST /api/notes
 - Create a note
-- Body: { "name": "Nota 1", "description": "Contenido", "urgency": "medium" }
+```
+Body: {
+  "name": "Nota 1",
+  "description": "Contenido",
+  "urgency": "medium"
+}
+```
 
 ### PUT /api/notes/:id
-- Update a note
+- Update a note with the given ID
 
 ### DELETE /api/notes/:id
 - Delete a note
+
+# API documentation
+You can view the public documentation for this API in postman here: 
+[postman docs](https://documenter.getpostman.com/view/31638634/2sB2xBEAp1)
