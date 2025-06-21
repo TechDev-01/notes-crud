@@ -10,19 +10,19 @@ This API includes authentication, access control over routes and basic CRUD oper
 
 # Run on local
 
-# Clone the repository
+## Clone the repository
 `git clone https://github.com/TechDev-01/notes-crud.git`
 
-# Cd to the directory
+## Cd to the directory
 cd notes-crud
 
-# Install the dependencies
+## Install the dependencies
 npm install
 
-# Create the .env file and set up the variables
+## Create the .env file and set up the variables
 cp .env.example .env
 
-# Run the server
+## Run the server
 npm run dev
 
 # Endpoints
@@ -53,6 +53,3 @@ npm run dev
 
 ### DELETE /api/notes/:id
 - Delete a note
-
-Autor: Steban S.  
-Licencia: MIT
